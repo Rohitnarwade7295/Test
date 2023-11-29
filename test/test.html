@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th,tr{
+            border:1pt solid #D8D9DA;
+            padding: 8px;
+            text-align: left;
+            font-size: 12pt;
+        }
+        th{
+            background-color: #D6EFED;
+            text-align: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <table>  
+        <thead>
+            <tr>
+                <th>Employee name</th>
+                <th>Designation</th>
+                <th>Date of joining</th>
+                <th>salary</th>
+              
+            </tr>
+           
+        </thead>
+        <tbody>
+            <tr>
+                <td>employee1</td>
+                <td>technical writer</td>
+                <td>29-11-23</td>
+                <td>5LPA</td>
+                
+            </tr>
+            
+            <tr>
+                <td>employee2</td>
+                <td>technical writer</td>
+                <td>1-12-23</td>
+                <td>7LPA</td>
+            </tr>
+
+            <xsl : for-each select="employees[Designation='technical writer' and salary > 5LPA and salary < 7LPA]"></xsl>
+
+            <tr>
+                <td><xsl:value-of select="employeeName"></td>
+                <td><xsl:value-of select="Designation"></td>
+                <td><xsl:value-of select="DateofJoining"></td>
+                
+            </tr>
+        </xsl:for-each>
+        </tbody>
+    </table>
+</body>
+</html>
